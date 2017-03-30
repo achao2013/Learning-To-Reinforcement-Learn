@@ -1,14 +1,9 @@
-# A3C Implementation
-This is an attempt to implement the A3C algorithm in paper Asynchronous Methods for Deep Reinforcement Learning.
+# A mxnet implementation of meta-RL
+This is an attempt to implement the bandits algorithm in paper Learning to reinforcement learn.
 
-Author: Junyuan Xie (@piiswrong)
-
-The algorithm should be mostly correct. However I cannot reproduce the result in the paper, possibly due to hyperparameter settings. If you can find a better set of parameters please propose a pull request.
-
-Note this is a generalization of the original algorithm since we use `batch_size` threads for each worker instead of the original 1 thread.
+The algorithm should be mostly correct. And this work is based on the repo:https://github.com/awjuliani/Meta-RL (TensorFlow)
 
 ## Usage
-run `python a3c.py --batch-size=32 --gpus=0` to run training on gpu 0 with batch-size=32.
+run python a3c-bandit.py --num-threads=32 --episode-len=100
 
-run `python launcher.py --gpus=0,1 -n 2 python a3c.py` to launch training on 2 gpus (0 and 1), each gpu has two workers.
 
